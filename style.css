@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Varela Round", sans-serif;
+    text-align: center;
+    background-color: #120d0d;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ea580c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(248, 234, 234, 0.796);
+    color: #fff;
+}
+
+.mood-picker {
+    margin: 20px 0;
+    background-color: #120d0d;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mood-btn {
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: transform 0.2s;
+}
+
+.mood-btn:hover {
+    transform: scale(1.6);
+}
+
+#mood-history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.mood-entry {
+    background: #120d0d;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mood-calandar-container{
+    margin: 10px 0;
+    width: 100%;
+    background-color: #120d0d;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+/* Calendar Styling */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 5px;
+    margin-top: 20px;
+    color: #120d0d;
+    align-content: center;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    background: #fff;
+}
+
+.today {
+    border: 2px solid #007BFF;
+    font-weight: bold;
+}
