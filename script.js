@@ -1,4 +1,3 @@
-
 const moodButtons = document.querySelectorAll(".mood-btn");
 const moodHistory = document.getElementById("mood-history");
 const calendar = document.getElementById("calendar");
@@ -44,6 +43,7 @@ function loadMoods() {
     moodEntry.innerHTML = `<span>${entry.date}</span> <span>${entry.mood}</span>`;
     moodHistory.appendChild(moodEntry);
   });
+  toggleHistory(); 
 }
 
 // Function to generate calendar view
@@ -90,10 +90,20 @@ function generateCalendar() {
   }
 }
 
-
 // Function to toggle collapsible mood history
 function toggleHistory() {
   let content = document.getElementById("mood-history");
+  let button = document.querySelector(".collapsible-btn");
+
+  if (content.children.length === 0) {
+    button.style.pointerEvents = "none"; // Disable click
+    button.style.opacity = "0.7"; // Reduce opacity to indicate disabled state
+    return; // Exit function if empty
+  } else {
+    button.style.pointerEvents = "auto"; // Enable click if not empty
+    button.style.opacity = "1"; // Restore opacity
+  }
+
   if (content.style.maxHeight) {
     content.style.maxHeight = null; // Collapse
   } else {
